@@ -1,0 +1,8 @@
+from collections import Counter #beats 84.31% runtime, 6.7% Memory 
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        nums = Counter(nums)
+        print(nums)
+        for value in nums:
+            if nums[value] == 1:
+                return value
